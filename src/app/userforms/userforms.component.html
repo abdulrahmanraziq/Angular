@@ -1,0 +1,112 @@
+<section>
+  <div class="text1">
+    <p>Facebook helps you connect and share with the<br> people in your life.
+    </p>
+    <img src="assets/images/7XdR1KwCifL.png">
+  </div>
+  <form (ngSubmit)="onSubmit(f.value)" #f="ngForm">
+    <h3>Create an account</h3>
+    <p>It's free and always will be.</p>
+
+    <input type="text" id="userthree" required name="firstName" placeholder="First Name" [(ngModel)]="model.firstName"
+      #firstName="ngModel">
+    <div *ngIf="f.invalid && (firstName.dirty || firstName.touched)" class="invalid-feedback">
+      <div *ngIf="firstName.errors.required">First Name is required</div>
+    </div>
+
+    <input type="text" id="userFour" required minlength="4" name="lastName" placeholder="Surname" [(ngModel)]="model.lastName"
+      #lastName="ngModel"><br>
+    <div *ngIf="f.invalid && (lastName.dirty || lastName.touched)" class="invalid-feedback">
+      <div *ngIf="lastName.errors.required">last Name must 4 character</div>
+    </div>
+
+    <input type="email" id="usrerfive" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email" placeholder="Mobile Number Or Email Address"
+      [(ngModel)]="model.email" #email="ngModel"><br>
+    <div *ngIf="f.invalid && (email.dirty || email.touched)" class="invalid-feedback">
+      <div *ngIf="email.errors.required">Email pattern required</div>
+    </div>
+
+    <input type="password" id="usrersix" required minlength="10" name="password" placeholder="password" [(ngModel)]="model.password"
+      #password="ngModel"><br>
+    <div *ngIf="f.invalid && (password.dirty || password.touched)" class="invalid-feedback">
+      <div *ngIf="password.errors.minlength">password is required with 10 characters</div>
+    </div>
+    <!---<p>Birthday</p>
+  <select>
+      <option value="volvo">1</option>
+      <option value="volvo">2</option>
+      <option value="volvo">3</option>
+      <option value="volvo">4</option>
+      <option value="volvo">5</option>
+      <option value="volvo">6</option>
+      <option value="volvo">7</option>
+      <option value="volvo">8</option>
+      <option value="volvo">9</option>
+      <option value="volvo">10</option>
+      <option value="volvo">11</option>
+      <option value="volvo">12</option>
+      <option value="volvo">13</option>
+      <option value="volvo">14</option>
+      <option value="volvo">15</option>
+      <option value="volvo">16</option>
+      <option value="volvo">17</option>
+      <option value="volvo">18</option>
+      <option value="volvo">19</option>
+      <option value="volvo">20</option>
+      <option value="volvo">21</option>
+      <option value="volvo">22</option>
+      <option value="volvo">23</option>
+      <option value="volvo">24</option>
+      <option value="volvo">25</option>
+      <option value="volvo">26</option>
+      <option value="volvo">27</option>
+      <option value="volvo">28</option>
+      <option value="volvo">29</option>
+      <option value="volvo">30</option>
+    </select>
+    <select>
+        <option value="volvo">Jan</option>
+        <option value="saab">Feb</option>
+        <option value="opel">Mar</option>
+        <option value="audi">Apr</option>
+        <option value="audi">Apr</option>
+        <option value="audi">May</option>
+        <option value="audi">June</option>
+        <option value="audi">July</option>
+        <option value="audi">Aug</option>
+        <option value="audi">Sept</option>
+        <option value="audi">Oct</option>
+        <option value="audi">Nov</option>
+        <option value="audi">Dec</option>
+      </select>
+      <select>
+          <option value="volvo">2001</option>
+          <option value="volvo">2002</option>
+          <option value="volvo">2003</option>
+          <option value="volvo">2004</option>
+          <option value="volvo">2005</option>
+          <option value="volvo">2006</option>
+          <option value="volvo">2007</option>
+          <option value="volvo">2008</option>
+          <option value="volvo">2009</option>
+          <option value="volvo">2010</option>
+         
+        </select>
+        <span><a>Why do I need to provide my date of birth?</a></span><br>
+        <div class="check">
+          <input type="checkbox" name="female" value="Female" class="checkfemale">Female
+          <input type="checkbox" name="male" value="male" class="male">Male
+        </div>
+        <span>By clicking Sign Up, you agree to our Terms, Data Policy and<br> Cookie Policy. You may receive SMS notifications from us and <br>can opt out at any time.</span><br>-->
+    <button type="submit" class="btn">Sign Up</button><br>
+    <!--<a>Create a page for celebrity, band or business</a>-->
+  </form>
+
+  <div>{{device.firstName}}</div>
+  <div>{{device.lastName}}</div>
+  <div>{{device.email}}</div>
+  <div>{{device.password}}</div>
+
+
+
+</section>

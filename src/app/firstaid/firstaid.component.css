@@ -1,0 +1,21 @@
+#Bodysectionfirstaid{
+    background: url("src/assets/image/back2.jpg")no-repeat;
+    background-size:cover;
+    height: 500px;
+}
+#BodysectionfirstaidOne{
+    padding: 45px 0px 45px 0px;
+}
+.overlay {
+    background: #A50612;
+    padding: 10px;
+}
+.overlay h4{
+   color: #fff;
+   text-align: center;
+   font-size: 17px;
+}
+.overlay p{
+    text-align: center;
+    color:#fff ;
+}

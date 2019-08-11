@@ -1,0 +1,60 @@
+header{
+    width: 100%;
+    background: #3b5998;
+    height: 100px;
+    top: 0;
+    left:0;
+}
+.headerss{
+    width: 90%;
+    margin: 0 auto;
+    margin-left: 10%;
+}
+.userText{
+    width: 5%;
+    float: left;
+}
+.userText p{
+    text-align: center;
+    color: #fff;
+    font-size: 28px;
+}
+form{
+    width: 58%;
+    float: left;
+    margin-left: 37%;
+}
+.headings{
+    width: 25%;
+    float: left;
+    color: #fff;
+    margin-top: 20px;
+    font-size: 15px;
+}
+.headingsOne{
+    width: 25%;
+    float: left;
+    color: #fff;
+    margin-top: 19px;
+    font-size: 15px;
+    margin-left: 16px;
+}
+#userOne{
+   
+    float: left;
+}
+#userTwo{
+    
+    float: left;
+}
+.buttons{
+    margin-top:34px; 
+}
+.submit{
+    background: #4267b2;
+    border-color: #29487d;
+    color: #fff;
+    padding: 5px 15px;
+    text-transform: capitalize;
+    margin-left: 22px;
+}

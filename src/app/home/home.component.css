@@ -1,0 +1,51 @@
+#BodySection1{
+    padding: 45px 0px 45px 0px;
+    background: url("src/assets/image/bg.png")no-repeat;
+    background-size: cover;
+
+}
+#BodySection1 h1{
+    text-align: center;
+    color: #356F87;
+}
+#BodySection1 p{
+    color: #333;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: 'Heebo', sans-serif;
+    line-height: 27px;
+}
+#BodySection1 p{
+    text-align: center;
+}
+#BodySection1 a{
+    color: #356f87;
+    font-size: 14px;
+    border: 2px solid #356f87;
+    padding: 5px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    text-align: center;
+}
+#BodySection1 a:hover{
+background: #356f87;
+color: #fff;
+}
+.users_back1 {
+    background: #e8e8e896;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #968484b5;
+}
+#BodySection2{
+    padding: 45px 0px 45px 0px;
+    background: #1B5D77;
+}
+#BodySection2 h1{
+    color: #fff;
+}
+#BodySection2 p{
+    color: #fff;
+    line-height: 35px;
+    font-weight: bold;
+    font-size: 15px;
+}

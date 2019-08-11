@@ -1,0 +1,22 @@
+.resp_logo {
+    width: 220px;
+}
+.user_navbar {
+    background: #066075!important;
+    box-shadow: 1px 1px 0px #000;
+    
+}
+.respbrand {
+    width: 20%;
+}
+.respnavul li a {
+    color: #fff!important;
+    font-weight:bold;
+    padding:5px 25px!important;
+    border: 2px solid #066075;
+}
+.respnavul li a:hover{
+    background: #677b29;
+    border: 2px solid #fff;
+    border-radius: 20px;
+}

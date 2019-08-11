@@ -1,0 +1,12 @@
+<ul>
+  <li *ngFor="let computer of device"
+  [class.selected]="computer === form"
+  (click)="onSelect(computer)">
+    <div>{{computer.id}}</div>
+    <div>{{computer.name}}</div>
+  </li>
+</ul>
+<div *ngIf="form">
+  <div>{{form.id}}</div>
+  <div>{{form.name}}</div>
+</div>

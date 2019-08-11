@@ -1,0 +1,27 @@
+#footer{
+    padding: 45px 0px 45px 0px;
+    background: #26272B;
+}
+#footer h3{
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    letter-spacing: 2px;
+}
+#footer p{
+    color: #737373;
+    line-height: 24px;
+    font-size: 15px;
+    text-align: justify;
+    font-weight: bold;
+}
+#footer ul{
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+#footer li a{
+    color: #737373;
+    text-decoration: none;
+}

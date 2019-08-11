@@ -1,0 +1,19 @@
+ul{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    width:70%;
+    float: right;
+    margin-top: -40px;
+}
+ul li{
+    display: inline;
+}
+ul li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+.logo{
+    width: 30%;
+}

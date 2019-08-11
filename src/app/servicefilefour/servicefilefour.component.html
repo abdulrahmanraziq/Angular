@@ -1,0 +1,10 @@
+<button type="button" (click)="getData()">Services</button>
+<ul *ngFor="let hero of books">
+<li>
+      <input [(ngModel)]="hero.id" placeholder="name"/>
+      {{hero.title}}
+    </li>
+    <button type="button" (click)="getData2(hero)">Submit</button>
+    <!----<button type="button" (click)="getdata3(hero.title)">Submit</button>-->
+  </ul>
+  

@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo:400,500,700,800');
+
+footer{
+    background: #fff;
+    padding: 25px 0px 25px 0px;
+}
+footer ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-top: 2%;
+}
+footer ul li{
+    display: inline;
+    padding: 5px;
+}
+footer ul li a{
+    text-decoration: none;
+    font-family: 'Heebo', sans-serif;
+    font-size: 15px;
+
+}

@@ -1,0 +1,11 @@
+#Bodysectionsportsservice{
+    background: url("src/assets/image/back4.jpg")no-repeat;
+    background-size:cover;
+    height: 500px;
+}
+#BodysectionsportsserviceOne{
+ padding: 45px 0px 45px 0px;
+}
+#BodysectionsportsserviceOne h3{
+    text-align: center;
+}
