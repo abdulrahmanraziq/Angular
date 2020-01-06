@@ -1,0 +1,13 @@
+<ul>
+  <li *ngFor = "let laptop of computer"
+  [class.selected]="laptop === device"
+  (click)="onSelect(laptop)">
+    <div>{{laptop.id}}</div>
+    <div>{{laptop.name}}</div>
+  </li>
+</ul>
+<div *ngIf="device">
+<div>{{device.id}}</div>
+<div>{{device.name
+  }}</div>
+</div>

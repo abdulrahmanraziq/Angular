@@ -1,11 +1,26 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { UserdashboardComponent } from './userdashboard/userdashboard.component';
+import { MyprofileComponent } from './myprofile/myprofile.component';
+import { UseraboutComponent } from './userabout/userabout.component';
+import {UserdashboardService} from '../userdashboard.service';
+import {ProjectsComponent} from './projects/projects.component';
+import {FormsModule} from '@angular/forms';
+import { UserdashboardTwoComponent } from './userdashboard-two/userdashboard-two.component'
 
 @NgModule({
-  declarations: [AdminPanelComponent],
+  declarations: [
+    UserdashboardComponent,
+    MyprofileComponent,
+    UseraboutComponent,
+    ProjectsComponent,
+    UserdashboardTwoComponent
+  ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    FormsModule
+  ],
+  exports : [UserdashboardComponent, MyprofileComponent, UseraboutComponent, ProjectsComponent, UserdashboardTwoComponent],
+  //providers : [UserdashboardService]
 })
 export class AdminModule { }

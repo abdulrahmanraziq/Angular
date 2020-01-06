@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h1>Employee Details</h1>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="employeeForm" (ngSubmit)="onsubmit()">
+          <div class="form-group">
+            <label for="uname">FirstName:</label>
+            <input type="text" class="form-control" id="unameOne" placeholder="Enter Your FirstName" name="unameOne" formControlName="firstName" [ngClass]="{'is-invalid':employeeForm.get('firstName').touched && employeeForm.get('firstName').invalid}">
+            <div class="invalid-feedback">First Name is Required</div>
+          </div>
+          <div class="form-group">
+            <label for="uname">LastName:</label>
+            <input type="text" class="form-control" id="unameTwo" placeholder="Enter Your LastName" name="unameTwo" formControlName="lastName" [ngClass]="{'is-invalid': employeeForm.get('lastName').touched && employeeForm.get('lastName').invalid}">
+            <div class="invalid-feedback">Last Name is Required</div>
+          </div>
+          <div class="form-group">
+            <label for="uname">Email:</label>
+            <input type="email" class="form-control" id="unameThree" placeholder="Enter Your Email" name="unameTwo" formControlName="email" [ngClass]="{'is-invalid':employeeForm.get('email').touched && employeeForm.get('email').invalidd}">
+            <div class="invalid-feedback">Email is Required</div>
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" formControlName="password">
+            <div class="invalid-feedback">Password Required</div>
+          </div>
+        </form>
+        </div>
+        <div class="card-footer">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+  </div>

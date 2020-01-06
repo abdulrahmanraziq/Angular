@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { UserloginService } from './userlogin.service';
+export type EditorType = 'name' | 'profile';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-app';
+  
+  constructor(private loginServices : UserloginService) {}
+
 }

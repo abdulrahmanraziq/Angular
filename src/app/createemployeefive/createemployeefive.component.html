@@ -1,0 +1,31 @@
+<div class="container">
+    <form  #userForm = "ngForm" (ngSubmit)="onSubmit(userForm.value)">
+       <div class="card">
+          <div class="card-header">
+             employee details
+          </div>
+          <div class="card-body">
+             <div class="form-group">
+                <label for="userNameOne">First Name:</label>
+                <input type="text" class="form-control" id="userNameOne" placeholder="Enter Your First Name" name="userNameOne"
+                ngModel>
+             </div>
+             <div class="form-group">
+                <label for="userNameTwo">Last Name:</label>
+                <input type="text" class="form-control" id="userNameTwo" placeholder="Enter Your Last Name" name="userNameTwo" ngModel>
+             </div>
+             <div class="form-group">
+                <label for="userNameThree">Email</label>
+                <input type="email" class="form-control" id="userNameThree" placeholder="Enter Your Email" name="userNameThree" ngModel>
+             </div>
+             <div class="form-group">
+                <label for="userNameFour">Password</label>
+                <input type="password" class="form-control" id="userNameFour" placeholder="Enter Your Password" name="userNameFour" ngModel>
+             </div>
+          </div>
+          <div class="card-footer">
+             <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+       </div>
+    </form>
+ </div>

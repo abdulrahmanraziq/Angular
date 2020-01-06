@@ -1,0 +1,11 @@
+User Name : <input type="text" [(ngModel)]="body">
+<button (click)="search()">Search</button>
+
+<ul>
+  <li *ngFor="let hero of response">
+    {{hero.userId}}
+    {{hero.id}}
+    {{hero.title}}
+    {{hero.body}}
+  </li>
+</ul>

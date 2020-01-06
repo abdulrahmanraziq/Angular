@@ -1,0 +1,16 @@
+<form name="form" (ngSubmit)="onSubmit()" #f="ngForm">
+  <label>First Name</label><br>
+  <input type="text" placeholder="Enter Your Name" class="userformstwo" required name="firstName" placeholder="First Name" [(ngModel)]="model.firstName"
+  #firstName="ngModel"><br>
+  <div *ngIf="f.submitted || (firstName.dirty || firstName.touched)" class="invalid-feedback">
+    <div *ngIf="firstName.errors.required">First Name is required</div>
+  </div>
+  <label>Password</label><br>
+  <input type="password" placeholder="Enter Your Password" class="formusersOne" required minlength="10" name="password" placeholder="password" [(ngModel)]="model.password"
+  #password="ngModel"><br>
+  <div *ngIf="f.submitted || (password.dirty || password.touched)" class="invalid-feedback">
+      <div *ngIf="password.errors.required">Password Name is required</div>
+    <div *ngIf="password.errors.minlength">password is required with 10 characters</div>
+  </div>
+  <button type="submit">Sign Up</button>
+</form>

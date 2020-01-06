@@ -1,0 +1,5 @@
+.selected{
+    background: #9932CC;
+    color: #fff;
+    transition-duration: 0.5s;
+}

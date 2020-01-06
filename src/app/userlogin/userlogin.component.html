@@ -1,0 +1,16 @@
+<div class="container">
+<form>
+    <h1>Login</h1>
+  <div class="form-group">
+    <label for="userOne">UserName:</label>
+    <input type="text" class="form-control" id="userOne" placeholder="Enter Your UserName" name="userOne" [(ngModel)]="loginviewmodels.UserName">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" [(ngModel)]="loginviewmodels.Password">
+  </div>
+
+  <span class="text-danger">{{loginError}}&nbsp;</span>
+  <button type="button" class="btn btn-primary" (click)="OnLooginClick($event)">Login</button>
+</form>
+</div>

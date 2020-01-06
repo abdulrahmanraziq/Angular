@@ -14,50 +14,43 @@ import {LifeguardComponent} from './lifeguard/lifeguard.component';
 import {FirstaidComponent} from './firstaid/firstaid.component';
 import {SportserviceComponent} from './sportservice/sportservice.component';
 import{ContactcobraComponent} from './contactcobra/contactcobra.component';
+import {FullogindetailsComponent} from './fullogindetails/fullogindetails.component';
+import {AttendanceformOneComponent} from './attendanceform-one/attendanceform-one.component';
+import {AttendanceformTwoComponent} from './attendanceform-two/attendanceform-two.component';
+import {AttendancingformModule} from './attendancingform/attendancingform.module';
 import{CustomerModule} from './customer/customer.module';
 import {OrdersModule} from './orders/orders.module';
 import{LoginsModule} from './logins/logins.module';
-const routes: Routes = [
-  /*{ path: '', redirectTo:'/dashboard', pathMatch: 'full'},
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'avengers', component: AvengersComponent },
-  { path: 'endgame', component: EndgameComponent },
-  { path: 'fulldetails', component: FulldetailsComponent},*/
-  /*{ path:'', redirectTo:'/explorer' , pathMatch:'full'},
-  { path: 'explorer', component: ExplorerComponent},
-  { path: 'medical', component: MedicalComponent},
-  { path: 'operations', component: OperationsComponent},
-  { path: 'profiling', component: ProfilingComponent},*/
-  {path:'', redirectTo:'/home', pathMatch:'full'},
-  {path : 'home' , component: HomeComponent},
-  {path : 'lifeguard' , component: LifeguardComponent},
-  {path : 'firstaid' , component: FirstaidComponent},
-  {path : 'sportservice' , component: SportserviceComponent},
-  {path : 'contactcobra' , component: ContactcobraComponent},
-  {path: 'logins' , loadChildren: () => LoginsModule},
-];
-  /*{path: 'customer', loadChildren: './customer/customer.module#CustomerModule'},
-  {path: 'orders', loadChildren: './orders/orders.module#OrdersModule'},
-  {path: '', redirectTo: '', pathMatch:'full' }
-];*/
-/*const routes: Routes = [
-  {
-    path: 'customers',
-    loadChildren:  () =>  CustomerModule
-  },
-  {
-    path: 'orders',
-    loadChildren:  () =>  OrdersModule
-  },
-  {
-    path: '',
-    redirectTo: '',
-    pathMatch: 'full'
-  }
-];*/
+//import {MedicaldataComponent} from './medicaldata/medicaldata.component';
+//import {SchooldataComponent} from './schooldata/schooldata.component';
+//import {ProvisionalModule} from './provisional/provisional.module';
+import {AttendisplayOneComponent} from './attendisplay-one/attendisplay-one.component';
+import {AttendisplayTwoComponent} from './attendisplay-two/attendisplay-two.component';
+import {BenchfourModule} from './benchfour/benchfour.module';
+import {UserdashboardComponent} from './admin/userdashboard/userdashboard.component';
+import {UseraboutComponent} from './admin/userabout/userabout.component';
+import {ProjectsComponent} from './admin/projects/projects.component';
+import { UserloginComponent } from './userlogin/userlogin.component';
+import {UserdashboardTwoComponent} from './admin/userdashboard-two/userdashboard-two.component';
 
+const routes: Routes = [
+ 
+  {path :'', redirectTo:'/userlogin', pathMatch : 'full'},
+  {path:'userlogin', component: UserloginComponent},
+  {path:'dashboard', component: DashboardComponent},
+  {path:'userdashboard', component: UserdashboardComponent},
+  {path:'userabout', component:UseraboutComponent},
+  {path : 'projects', component : ProjectsComponent},
+  {path : 'dashboardTwo', component : UserdashboardTwoComponent},
+
+  
+  //{path:'attendanceFour', loadChildren:()=>BenchfourModule}
+  
+ //{path : 'provisional', loadChildren:() => ProvisionalModule}
+];
+  
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {useHash : true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

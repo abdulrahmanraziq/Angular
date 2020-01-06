@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="card">
+       <div class="card-header">
+          Employee Details
+       </div>
+       <form name="form" #f="ngForm" novalidate>
+          <div class="card-body">
+             <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" class="form-control" [(ngModel)]="model.firstName" #firstName="ngModel" [ngClass]="{'is-invalid': f.submitted && firstName.invalid}" id="firstName" placeholder="Enter Your First Name" name="firstName" required>
+                <div class="invalid-feedback">Please Enter Your First Name.</div>
+             </div>
+             <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" class="form-control" [(ngModel)]="model.lastName" #lastName="ngModel" [ngClass]="{'is-invalid': f.submitted && lastName.invalid}" id="lastName" placeholder="Enter Your Last Name" name="lastName" required>
+                <div class="invalid-feedback">Please Enter Your Last Name.</div>
+             </div>
+             <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" [(ngModel)]="model.email" #email="ngModel" [ngClass]="{'is-invalid': f.submitted && email.invalid}" id="email" placeholder="Enter Your Email" name="email" required>
+                <div class="invalid-feedback">Please Enter Your Email.</div>
+             </div>
+             <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" [(ngModel)]="model.password" #password="ngModel" [ngClass]="{'is-invalid' : f.submitted && password.invalid}" id="password" placeholder="Enter Your Password" name="password" required>
+                <div class="invalid-feedback">Please Enter Your Password.</div>
+             </div>
+          </div>
+          <div class="card-footer">
+             <button type="submit" class="btn btn-success">Submit</button>
+          </div>
+          {{model|json}}
+       </form>
+       
+    </div>
+ </div>

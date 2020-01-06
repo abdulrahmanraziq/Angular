@@ -15,6 +15,7 @@ books:any;
   ngOnInit() {
   }
   getData(){
+    
     this.api.getBooks()
     .subscribe(res => {
       console.log(res);

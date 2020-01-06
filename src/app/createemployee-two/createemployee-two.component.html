@@ -1,0 +1,26 @@
+<div class="container">
+    <form [formGroup]= "employeeForm" (ngSubmit)="onSubmit()">
+       <div class="card">
+         <div class="card-header bg-primary text-white">
+           contact employee
+         </div>
+         <div class="card-body">
+          <div class="form-group">
+             <label for="userOne">Full Name:</label>
+             <input type="text" formControlName="fullname" class="form-control" id="userOne" placeholder="Enter your Full Name" name="userOne">
+          </div>
+          <div class="form-group">
+             <label for="email">Email:</label>
+             <input type="email" formControlName="email" class="form-control" id="userTwo" placeholder="Enter your Email" name="userTwo">
+          </div>
+          <div class="form-group">
+             <label for="userThree">Password:</label>
+             <input type="password" formControlName="password" class="form-control" id="userThree" placeholder="Enter your Password" name="userThree">
+          </div>
+        </div>
+        <div class="card-footer bg-danger">
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </div> 
+       </div>
+    </form>
+ </div>

@@ -1,0 +1,15 @@
+<ul>
+  <li *ngFor="let hero of device"
+  [class.selected]="hero === data"
+  (click)="onSelect(hero)">
+    {{hero.id}}
+    {{hero.name}}
+  </li>
+</ul>
+<app-heropen-details [hero]="data"></app-heropen-details>
+<div *ngIf="data">
+{{data.id}}
+{{data.name}}
+</div>
+
+<div (sendData)="receivedData($event)"></div>

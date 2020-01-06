@@ -1,0 +1,34 @@
+<div class="container">
+<form name="employeeForm" [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+  <div class="card">
+  <div class="card-header">
+    employee details
+  </div>
+  <div class="card-body">
+  <div class="form-group">
+    <label for="usernameOne">First Name:</label>
+    <input type="text" class="form-control" id="usernameOne" placeholder="Enter your First Name" name="usernameOne" formControlName="firstName" [ngClass]="{'is-invalid' : employeeForm.get('firstName').touched && employeeForm.get('firstName').invalid}">
+    <div class="invalid-feedback">Please Enter Your First Name</div>
+  </div>
+  <div class="form-group">
+    <label for="usernameTwo">Last Name:</label>
+    <input type="text" class="form-control" id="usernameTwo" placeholder="Enter your Last Name" name="usernameTwo" formControlName="lastName" [ngClass]="{'is-invalid' : employeeForm.get('lastName').touched && employeeForm.get('lastName').invalid}">
+    <div class="invalid-feedback">Please Enter Your Last Name</div>
+  </div>
+  <div class="form-group">
+    <label for="usernameThree">Email:</label>
+    <input type="email" class="form-control" id="usernameThree" placeholder="Enter your Email" name="usernameThree" formControlName="email" [ngClass]="{'is-invalid' : employeeForm.get('email').touched && employeeForm.get('email').invalid}">
+    <div class="invalid-feedback">Please Enter Your Email</div>
+  </div>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" formControlName="password" [ngClass]="{'is-invalid' : employeeForm.get('password').touched && employeeForm.get('password').invalid}">
+    <div class="invalid-feedback">Please Enter Your Password</div>
+  </div>
+</div>
+<div class="card-footer">
+  <button type="submit" class="btn btn-primary">Submit</button>
+</div>
+</div>
+</form>
+</div>

@@ -1,0 +1,9 @@
+<ul>
+  <li *ngFor ="let hero of device"
+  [class.selected]="hero === data"
+  (click)="onSelect(hero)">
+    {{hero.id}}
+    {{hero.name}}
+  </li>
+</ul>
+<app-userusama [hero]="data"></app-userusama>

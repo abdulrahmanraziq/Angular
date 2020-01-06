@@ -1,0 +1,9 @@
+<ul>
+  <li *ngFor = "let fetch of storage"
+  [class.select]="fetch === device"
+  (click)="onSelect(fetch)">
+    <div>{{fetch.id}}</div>
+    <div>{{fetch.name}}</div>
+  </li>
+</ul>
+<app-hero-details [fetch] = "device"></app-hero-details>

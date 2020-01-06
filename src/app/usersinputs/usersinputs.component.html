@@ -1,0 +1,10 @@
+<ul>
+  <li *ngFor = "let hero of device"
+  [class.selected]="hero === computer"
+  (click)="onSelect(hero)">
+    {{hero.id}}
+    {{hero.name}}
+  </li>
+</ul>
+
+<app-userinputs-two [hero]="computer"></app-userinputs-two>

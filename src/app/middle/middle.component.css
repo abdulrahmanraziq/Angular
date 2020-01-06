@@ -1,0 +1,21 @@
+.userbackOne{
+    background: #737575;
+}
+.userbackOne ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    line-height: 50px;
+    margin-top:20px;
+    margin-bottom: 30px; 
+}
+.userbackOne ul li{
+    text-align: center;
+}
+.userbackOne ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+#Bodysection2{
+    padding: 45px 0px 45px 0px;
+}
