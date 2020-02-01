@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SimpleChanges, OnChanges } from '@angular/core';
 import {ProjectsService} from '../../projects.service';
 import {Projects} from 'src/app/projects'
 @Component({
@@ -6,7 +6,7 @@ import {Projects} from 'src/app/projects'
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css']
 })
-export class ProjectsComponent implements OnInit {
+export class ProjectsComponent implements OnChanges, OnInit {
     projects : Projects[]
     newProjects : Projects = new Projects();
     editProjects : Projects = new Projects();
@@ -15,6 +15,17 @@ export class ProjectsComponent implements OnInit {
     deleteIndex:any  = null;
 
   constructor (private projectservice : ProjectsService) { }
+
+  ngOnChanges(simpleChanges:SimpleChanges){
+    console.info("---------------ngOnChangesCalled");
+
+    for (let propName in simpleChanges){
+      let chng = simpleChanges[propName];
+      let cur = JSON.stringify(chng.currentValue);
+      let prev = JSON.stringify(chng.previousValue);
+      console.log(`${propName}:currentValue = ${cur}, previousValue = ${prev}`);
+    }
+  }
 
   ngOnInit() {
     this.projectservice.getAllProjects().subscribe(
@@ -28,6 +39,9 @@ export class ProjectsComponent implements OnInit {
     );
   }
 
+  ngDoCheck(){
+    console.info("---------------ngDoCheckCalled");
+  }
   
   OnSaveClick(){
     this.projectservice.insertAllProjects(this.newProjects).subscribe((response) => {
