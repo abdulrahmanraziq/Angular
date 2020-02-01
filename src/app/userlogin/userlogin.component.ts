@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UserloginService } from '../userlogin.service';
-import {Loginviewmodel} from '../loginviewmodel';
 import {Router} from '@angular/router';
+import {LocalstorageService} from '../localstorage.service';
 
 
 @Component({
@@ -11,22 +10,17 @@ import {Router} from '@angular/router';
 })
 export class UserloginComponent implements OnInit {
 
-  loginviewmodels : Loginviewmodel = new Loginviewmodel();
-  loginError : string ="";
-
-  constructor(private UserLogin : UserloginService, private router : Router) { }
+ 
+  constructor(private storage : LocalstorageService, private router : Router) { }
 
   ngOnInit() {
+    if (this.storage.get('loggedIn')){
+      this.router.navigate(['/userdashboard']);
+    }
   }
-  OnLooginClick(){
-    this.UserLogin.Login(this.loginviewmodels).subscribe(
-      (response)=>{
-        this.router.navigateByUrl("/userdashboard");
-      },
-      (error) =>{
-        console.log(error);
-        this.loginError = "Invalid Username or Password";
-      },
-    );
+  login():void{
+    this.storage.set('loggedIn', true);
+    this.router.navigate(['/userdashboard']);
   }
+  
 }

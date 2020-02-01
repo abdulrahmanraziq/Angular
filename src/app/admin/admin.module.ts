@@ -7,6 +7,7 @@ import {UserdashboardService} from '../userdashboard.service';
 import {ProjectsComponent} from './projects/projects.component';
 import {FormsModule} from '@angular/forms';
 import { UserdashboardTwoComponent } from './userdashboard-two/userdashboard-two.component'
+import { NumberToWordsPipe } from '../number-to-words.pipe';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { UserdashboardTwoComponent } from './userdashboard-two/userdashboard-two
     MyprofileComponent,
     UseraboutComponent,
     ProjectsComponent,
-    UserdashboardTwoComponent
+    UserdashboardTwoComponent,
+    NumberToWordsPipe
   ],
   imports: [
     CommonModule,

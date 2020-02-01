@@ -32,16 +32,32 @@ import {UseraboutComponent} from './admin/userabout/userabout.component';
 import {ProjectsComponent} from './admin/projects/projects.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import {UserdashboardTwoComponent} from './admin/userdashboard-two/userdashboard-two.component';
+import {PermissionserviceService} from './permissionservice.service';
 
 const routes: Routes = [
  
   {path :'', redirectTo:'/userlogin', pathMatch : 'full'},
   {path:'userlogin', component: UserloginComponent},
-  {path:'dashboard', component: DashboardComponent},
-  {path:'userdashboard', component: UserdashboardComponent},
-  {path:'userabout', component:UseraboutComponent},
-  {path : 'projects', component : ProjectsComponent},
-  {path : 'dashboardTwo', component : UserdashboardTwoComponent},
+  {
+    path:'dashboard', component: DashboardComponent,
+    canActivate: [PermissionserviceService]
+  },
+  {
+    path:'userdashboard', component: UserdashboardComponent,
+    canActivate: [PermissionserviceService]
+  },
+  {
+    path:'userabout', component:UseraboutComponent,
+    canActivate: [PermissionserviceService]
+  },
+  {
+    path : 'projects', component : ProjectsComponent,
+    canActivate: [PermissionserviceService]
+  },
+  {
+    path : 'dashboardTwo', component : UserdashboardTwoComponent,
+    canActivate: [PermissionserviceService]
+  },
 
   
   //{path:'attendanceFour', loadChildren:()=>BenchfourModule}
@@ -50,7 +66,7 @@ const routes: Routes = [
 ];
   
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {useHash : true})],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
